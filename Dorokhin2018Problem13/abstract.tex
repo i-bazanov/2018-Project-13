@@ -3,22 +3,26 @@
 \begin{document}
 %\NOREVIEWERNOTES
 \title
-{Deep Learning for RNA secondary structure prediction}
+{Spherical CNN for QSAR prediction}
 \author
-[Popova M, Nikitin P, Pastukhov S, Proshutinskiy D, Kurilovich A, Bazanov I, Nesterova I, Pikunov A, Dorokhin S.] % список авторов для колонтитула; не нужен, если основной список влезает в колонтитул
-{Popova M, Nikitin P, Pastukhov S, Proshutinskiy D, Kurilovich A, Bazanov I, Nesterova I, Pikunov A, Dorokhin S.} % основной список авторов, выводимый в оглавление
+{Dorokhin S.$^1$, Popova M.$^2$} % основной список авторов, выводимый в оглавление
 \thanks
 {Scientific advisor:  Strijov~V.\,V.
-The problem given by:  Popova~M.\,?.
-Consultant: Philipp~N.\,?.}
+}
 \organization
-{MIPT}
+{$^1$MIPT, $^2$University of North Carolina}
 \abstract
 {
     \textbf{Abstract:}
-        RNA secondary structure is an important feature which defines RNA functional properties. As secondary structure often defines functions, knowing RNAs secondary structure may help to investigate functions of novel RNA molecules. With current methods of RNA structure prediction only 80\% of structures can be accurately predicted. An AI-driven method for predicting RNA secondary structure inspired by neural machine translation model is proposed. The method is based on CONTRAfold which implements conditional log-linear models. Google's Neural Machine Translation System is used to map input RNN chains into output text. 
+    The task of predicting molecular properties e.g. biological activity or solubility based on the atomic structure is called QSAR (quantitative structure-activity relationship) prediction.
+    It is a classical problem in drug design.
+    Despite various algorythms (quantile regression, radial basis function neural networks) are an acceptable solution, there is still a need for more presice results. 
+    A model originally developed for 3D shapes recognition was chosed and put under carefull examination in context of QSAR forecasting.
+    That model is Spherical CNN, first suggested by Taco S. Cohen et. al., who managed to demonstrate that this NN performs well in several applications, including atomization energy prediction.
+    The implemented model is compared with common CNN, RNN, graph CNN and Random Forest.    
 \bigskip
-\textbf{Keywords}: \emph {Deep Learning, RNA structure, Machine Translation System}
+\\
+\textbf{Keywords}: \emph {QSAR prediction, Spherical CNN, drug design}
 }
 \maketitle
 \end{document}
