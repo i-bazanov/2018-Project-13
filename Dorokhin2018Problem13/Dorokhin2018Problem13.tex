@@ -1,15 +1,6 @@
 \documentclass[12pt,twoside]{article}
 \usepackage{jmlda}
 \begin{document}
-\begin{thebibliography}{9}
-\bibliographystyle{plain}
-\bibliography{Dorokhin2018Problem13}
-\bibitem{Wiener15}
-    Meryam et. al., 
-    Some tools of QSAR/QSPR and drug development: Wiener and Terminal Wiener indices, 
-    2015 International Conference on Cloud Technologies and Applications,
-    2015.
-\end{thebibliography}
 %\NOREVIEWERNOTES
 \title
 {Spherical CNN for QSAR prediction}
@@ -37,14 +28,18 @@
 \section{Introduction}
     The idea of QSAR (Qualitive Structure Activity Realtionships) is to associate 2D or 3D structural representaion of a molecule with its biological or chemical properties. 
     This research is aimed at building an accurate QSAR prediction tool. There were several attempts to solve the problem. Meryam Zeryouh et. al. \cite{Wiener15} used graph representaion and suggested formulas for calculation of Wiener indices of complicated graphs. 
-    Wiener indices do correlate with such properties as critical point (ref) or viscosity (ref), but there is still no distinct relation to solubility or target activity, which are of extreme importance in drug design. 
-    Nupur S Munjal et. al.(ref) performed a non-linear multi-colinearity regression analysis to build model which predicts paclitaxel solubility. However, their model is designed for a specific compound and thus lacks universality. 
-    Fatima Adilova and Alisher Ikramov (ref) analyzed Matched Molecular Pairs (MMP) method in context of QSAR prediction. They managed to demonstrate that such an approach is inappropiate for QSAR modelling. 
+    Wiener indices do correlate with such properties as critical point (Stiel and Thodos \cite{Critical}) or viscosity (Rouvray and Crafford \cite{Visc}), but there is still no distinct relation to solubility or target activity, which are of extreme importance in drug design. 
+    Nupur S Munjal et. al. \cite{Paclitaxel16} performed a non-linear multi-colinearity regression analysis to build model which predicts paclitaxel solubility. However, their model is designed for a specific compound and thus lacks universality. 
+    Fatima Adilova and Alisher Ikramov \cite{MMP17} analyzed Matched Molecular Pairs (MMP) method in context of QSAR prediction. They managed to demonstrate that such an approach is inappropiate for QSAR modelling. 
 \newline
-    The method suggested in this article is based on Spherical Convolution Neural Networks. This concept was introduced by Taco S. Cohen et. al. (ref), who defined the correlation of two signals in SO(3) rotation group and the generalized convolution. 
+    The method suggested in this article is based on Spherical Convolution Neural Networks. This concept was introduced by Taco S. Cohen et. al. \cite{SCNN}, who defined the correlation of two signals in SO(3) rotation group and the generalized convolution. 
     The unique feature of the CNN suggested in their article is that the abovementioned convolution allows to create a distortion-free projection of a spherical signal.
      Taco et. al. tested the CNN in various tasks, including prediction of atomization energies from molecular geometry. The model yielded excellent results and this makes applying it to QSAR prediction an interesting challenge. 
 \newline
     The main drawback of the suggested model is its complexity resulting in significant number of parameters (around 1M) and huge memory and time resources required. 
     However, the resulting model is expcted to be a universal solution. It is compared with conventional CNN, RNN, graph CNN and Random Forest.
+\bibliographystyle{plain}
+\bibliography{Dorokhin2018Problem13}
+\begin{thebibliography}{6}
+\end{thebibliography}
 \end{document}
